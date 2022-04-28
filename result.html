@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result</title>
+  <link href="css/result.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main id="ResultPage">
+    <div class="InputContainer">
+      <article class="KeyContainer">
+        <div class="LabelKeyContainer">
+          <label for="keyTextArea" class="Label">암호화에 쓰인 키 (암호키)</label>
+      </article>
+      <article class="StrContainer">
+        <div class="LabelStrContainer">
+          <label for="StrTextArea" class="Label">암호화한 문자열 (평문)</label>
+      </article>
+      <article class="EnIngContainer">
+        <div class="LabelEnIngContainer">
+          <label for="EnIngTextArea" class="Label">문자열 재구성 (매핑)</label>
+      </article>
+      <article class="EnResultContainer">
+        <div class="LabelEnResultContainer">
+          <label for="EnResultTextArea" class="Label">암호화된 문자열 (암호문)</label>
+      </article>
+      <article class="DeResultContainer">
+        <div class="LabelDeResultContainer">
+          <label for="DeResultTextArea" class="Label">복호화된 문자열 (복호문)</label>
+      </article>
+      <article class="ButtonContainer">
+        <div id="btndelete">
+          <button class="DeButton" id="btndelete" onclick="goDescryption()">복호화</button>
+        </div>
+      </article>
+    </div>
+    <article class="BoardContainer">
+      <div class="LabelBoardContainer" style="margin-left: 8vw;">
+        <label for="resultBoard" class="Label">암호판</label>
+        <div id="resultBoard"></div>
+    </article>
+  </main>
+  <script type="text/javascript" src="js/result.js"></script>
+</body>
+
+</html>

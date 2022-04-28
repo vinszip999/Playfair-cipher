@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input</title>
+  <link href="css/input.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="Container">
+    <main id="InputPage">
+      <h1>다중 문자 치환 암호화</h1>
+      <article class="MainInputContainer">
+        <form method="GET" name="forResult">
+          <div class="KeyContainer">
+            <div class="LabelKeyContainer">
+              <label for="InputKey" class="LabelKey">암호키</label>
+            </div>
+            <div class="InputKeyContainer">
+              <!-- input 옵션에 pattern 정규 표현식 넣어서 영문, 공백이 아닌 값 입력 시 css에서 빨간 border 뜨게 하기-->
+              <input type="text" class="InputKey" placeholder="암호화에 쓰일 키(암호키)를 입력하세요" pattern="^[a-zA-Z\s]+$"
+                name="inputedKey" id="key" onkeyup="getInput(this)" onkeydown="onlyAlphabet(this)" />
+            </div>
+          </div>
+
+          <div class="KeyholeContainer">
+            <div class="LabelKeyholeContainer">
+              <label for="InputPlaintext" class="LabelKeyhole">평문</label>
+            </div>
+            <div class="InputPlaintextContainer">
+              <!-- input 옵션에 pattern 정규 표현식 넣어서 영문, 공백이 아닌 값 입력 시 css에서 빨간 border 뜨게 하기-->
+              <input type="text" class="InputPlaintext" placeholder="암호화할 문자열(평문)을 입력하세요" pattern="^[a-zA-Z\s]+$"
+                name="inputedStr" id="str" onkeyup="getInput(this)" onkeydown="onlyAlphabet(this)" />
+            </div>
+          </div>
+
+          <div class="submitContainer">
+            <button class="InputSubmit" id="en" type="submit" onclick="actionEn()">
+              Encryption
+            </button>
+        </form>
+      </article>
+    </main>
+  </div>
+  <script type="text/javascript" src="js/input.js"></script>
+</body>
+
+</html>
